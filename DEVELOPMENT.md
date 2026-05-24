@@ -27,11 +27,12 @@
 
 ---
 
-- sensor mpu6050
+- caf sensor mpu6050
 - upgrade to 3.3.0+
 
 ---
 
+- signed firmware
 - shell iotest-fw
 - lvgl
 - tfm
