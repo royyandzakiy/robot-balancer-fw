@@ -14,7 +14,7 @@ zephyr_library_include_directories(src/events)
 
 # Application sources
 # NORDIC SDK APP START
-target_sources(app PRIVATE src/main.c)
+target_sources(app PRIVATE src/main.cpp)
 
 target_sources(app PRIVATE
 		src/events/ack_event.c
