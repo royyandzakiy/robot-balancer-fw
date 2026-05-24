@@ -27,5 +27,6 @@ target_sources(app PRIVATE
 		src/modules/controller.c
 		src/modules/sensor_simulated.c
 		src/modules/stats.c
+		src/modules/bluetooth_smp.c
 )
 # NORDIC SDK APP END
