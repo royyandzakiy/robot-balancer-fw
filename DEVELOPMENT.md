@@ -27,9 +27,11 @@
 
 ---
 
+- sensor mpu6050
 - upgrade to 3.3.0+
 
 ---
 
 - shell iotest-fw
+- lvgl
 - tfm
