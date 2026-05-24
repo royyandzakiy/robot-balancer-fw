@@ -1,12 +1,14 @@
-- west manifest
 - cpp23
 - aem
 - ble dfu (sysbuild mcuboot)
-- devcontainer
-- smf
 - rtt
+
+- smf
 - gtest (cmake fetch)
 - native_sim
+
+- west manifest
+- devcontainer
 
 - watchdog
 - systemview (rtt-tracing) [link](https://docs.zephyrproject.org/latest/services/tracing/index.html)
