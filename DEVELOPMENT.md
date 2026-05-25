@@ -43,5 +43,10 @@
 
 ---
 
+- seperate core/ & app/
+- create full template (generalize code)
+
+---
+
 - shell iotest-fw
 - lvgl
