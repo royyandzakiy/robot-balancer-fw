@@ -13,7 +13,6 @@
 
 ## todo
 
-- tfm
 - upgrade to 3.2.1
 - smf (requires v3.2.x+)
 - ztest + native_sim linux only (requires v3.2.x+)
