@@ -12,6 +12,7 @@
 	"editor.tabSize": 4,
 	"editor.detectIndentation": false,
 	"clang-format.style": "file",
+	// --- Include Associations (standard C++ headers) ---
 	"files.associations": {
 		"*.defaults": "kconfig",
 		"algorithm": "c",
@@ -20,4 +21,8 @@
 		"xtree": "c",
 		"xutility": "c"
 	},
+	"C_Cpp.default.includePath": [
+		"${workspaceFolder}/**",
+		"C:/ncs/v3.3.0/**"
+	],
 }

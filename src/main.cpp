@@ -4,9 +4,12 @@
  * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
  */
 // main.cpp
+#include "modules/bluetooth_smp.h"
+#include <app_event_manager.h>
 #include <array>
 #include <chrono>
 #include <concepts>
+#include <config_event.h>
 #include <cstdio>
 #include <expected>
 #include <limits>
@@ -19,9 +22,7 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/random/random.h>
-#include <app_event_manager.h>
-#include <config_event.h>
-#include "modules/bluetooth_smp.h"
+#include <zephyr/smf.h>
 
 #define MODULE app
 LOG_MODULE_REGISTER(app, 3);
@@ -47,12 +48,12 @@ constexpr int32_t CALIBRATION_REFERENCE_TEMP = 2250;	  // 22.50°C
 constexpr int MAX_CALIBRATION_STEPS = 5;
 
 std::expected<double, std::string> divide(double numerator, double denominator) {
-    if (denominator == 0.0) {
-        // Return the error wrapped in std::unexpected
-        return std::unexpected("Error: Division by zero!");
-    }
-    // Return the successful result directly
-    return numerator / denominator;
+	if (denominator == 0.0) {
+		// Return the error wrapped in std::unexpected
+		return std::unexpected("Error: Division by zero!");
+	}
+	// Return the successful result directly
+	return numerator / denominator;
 }
 
 // --- Time utilities for Zephyr ---
@@ -410,9 +411,7 @@ void main_thread_entry(void *p1, void *p2, void *p3) {
 	}
 }
 
-
-extern "C" int main(void)
-{
+extern "C" int main(void) {
 	LOG_INF("Hello, again!");
 
 	start_smp_bluetooth_adverts();
@@ -424,7 +423,6 @@ extern "C" int main(void)
 
 	// Let the scheduler run
 	k_thread_join(&main_thread, K_FOREVER);
-
 
 	if (app_event_manager_init()) {
 		LOG_ERR("Application Event Manager not initialized");
