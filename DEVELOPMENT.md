@@ -48,4 +48,6 @@
 ---
 
 - shell iotest-fw
+- github actions CI
+- twister, pytest
 - lvgl

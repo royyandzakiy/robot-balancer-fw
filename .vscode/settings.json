@@ -25,4 +25,7 @@
 		"${workspaceFolder}/**",
 		"C:/ncs/v3.3.0/**"
 	],
+	"C_Cpp.default.compileCommands": [
+  		"build_v330/balancer-robot-fw/compile_commands.json"
+  	]
 }
