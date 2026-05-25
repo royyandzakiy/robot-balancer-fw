@@ -14,6 +14,7 @@
 - ztest + native_sim linux only (requires v3.2.x+)
 - gtest (cmake fetch)
 
+- fix: .vscode missing includes for zephyr/ncs
 - west manifest
 - devcontainer
 
