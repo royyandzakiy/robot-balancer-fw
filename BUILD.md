@@ -56,6 +56,10 @@ Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_ns/
 
 - Use nrf connect app
 - Scan then connect to it
+- Select DFU button on the top right
+- Select `zephyr.signed.bin` file
+- Will start uploading
+  - Will succeed if properly signed, or if is also `_ns`
 
 ```bash
 # copy to phone
