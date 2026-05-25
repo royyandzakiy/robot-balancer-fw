@@ -5,11 +5,13 @@
 - ble dfu (sysbuild mcuboot)
 - rtt
 - smf (fail, requires v3.2.x+)
+- signed firmware
 
 ---
 
 ## todo
 
+- tfm
 - upgrade to 3.2.1
 - ztest + native_sim linux only
 - gtest (cmake fetch)
@@ -27,12 +29,17 @@
 
 ---
 
+- system design
+- basic example: iotest: read mpu, read ble, set led pwm
+
+---
+
+- dts: led, mpu
 - caf sensor mpu6050
+- pwm led
 - upgrade to 3.3.0+
 
 ---
 
-- signed firmware
 - shell iotest-fw
 - lvgl
-- tfm
