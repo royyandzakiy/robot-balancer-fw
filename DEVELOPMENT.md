@@ -4,11 +4,12 @@
 - aem
 - ble dfu (sysbuild mcuboot)
 - rtt
-- smf (fail, requires v3.2.x+)
+- rename to: robot-balancer-fw
 
 ## todo
 
 - upgrade to 3.2.1
+- smf (requires v3.2.x+)
 - ztest + native_sim linux only
 - gtest (cmake fetch)
 

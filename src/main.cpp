@@ -413,6 +413,8 @@ void main_thread_entry(void *p1, void *p2, void *p3) {
 
 extern "C" int main(void)
 {
+	LOG_INF("Hello, again!");
+
 	start_smp_bluetooth_adverts();
 
 	// Create main thread

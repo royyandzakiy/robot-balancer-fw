@@ -7,26 +7,19 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(zephyr-app-event-manager)
+project(balancer-robot-fw)
 
 # Include application application event headers
 zephyr_library_include_directories(src/events)
 
-# Application sources
-# NORDIC SDK APP START
+# Application sources NORDIC SDK APP START
 target_sources(app PRIVATE src/main.cpp)
 
-target_sources(app PRIVATE
-		src/events/ack_event.c
-		src/events/config_event.c
-		src/events/control_event.c
-		src/events/measurement_event.c
-)
+target_sources(
+  app PRIVATE src/events/ack_event.c src/events/config_event.c
+              src/events/control_event.c src/events/measurement_event.c)
 
-target_sources(app PRIVATE
-		src/modules/controller.c
-		src/modules/sensor_simulated.c
-		src/modules/stats.c
-		src/modules/bluetooth_smp.c
-)
+target_sources(
+  app PRIVATE src/modules/controller.c src/modules/sensor_simulated.c
+              src/modules/stats.c src/modules/bluetooth_smp.c)
 # NORDIC SDK APP END

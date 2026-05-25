@@ -4,3 +4,6 @@
 
 # build
 /build*/
+
+# signing key - private key must never be committed
+signing_key.pem
