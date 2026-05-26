@@ -14,6 +14,8 @@
 
 ## todo
 
+- making using mcuboot as optional
+- making using mcuboot signature verification as optional
 - ztest + native_sim linux only
 - gtest (cmake fetch)
 - smf (only added include, not yet added logic)

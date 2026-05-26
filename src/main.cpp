@@ -414,7 +414,9 @@ void main_thread_entry(void *p1, void *p2, void *p3) {
 extern "C" int main(void) {
 	LOG_INF("Hello, again!");
 
+#ifdef CONFIG_BT
 	start_smp_bluetooth_adverts();
+#endif // CONFIG_BT
 
 	// Create main thread
 	k_thread_create(&main_thread, main_stack, K_THREAD_STACK_SIZEOF(main_stack), main_thread_entry, nullptr, nullptr,
