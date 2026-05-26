@@ -9,14 +9,14 @@
 - smf (fail, requires v3.2.x+)
 - signed firmware
 - upgrade to 3.3.0
-- smf (requires v3.2.x+)
 
 ---
 
 ## todo
 
-- ztest + native_sim linux only (requires v3.2.x+)
+- ztest + native_sim linux only
 - gtest (cmake fetch)
+- smf (only added include, not yet added logic)
 
 - fix: .vscode missing includes for zephyr/ncs
 - west manifest
