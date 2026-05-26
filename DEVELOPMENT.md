@@ -8,13 +8,13 @@
 - tfm
 - smf (fail, requires v3.2.x+)
 - signed firmware
+- upgrade to 3.3.0
+- smf (requires v3.2.x+)
 
 ---
 
 ## todo
 
-- upgrade to 3.2.1
-- smf (requires v3.2.x+)
 - ztest + native_sim linux only (requires v3.2.x+)
 - gtest (cmake fetch)
 

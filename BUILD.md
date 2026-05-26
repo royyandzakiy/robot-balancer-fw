@@ -1,6 +1,6 @@
 # Getting Started
 
-All the below setups has successfully been built using ncs `v3.0.2` in win11
+All the below setups has successfully been built using ncs `v3.3.0` in win11
 
 ## Build Normally
 
@@ -21,7 +21,7 @@ west build --build-dir c:/project-coding/iot/projects/balancer-robot-fw/build_ns
 ```bash
 ...
 
--- Cache files will be written to: C:/ncs/v3.0.2/zephyr/.cache
+-- Cache files will be written to: C:/ncs/v3.3.0/zephyr/.cache
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/project-coding/iot/projects/balancer-robot-fw/build_ns/balancer-robot-fw/tfm
@@ -41,7 +41,7 @@ Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_ns/
 image.py: sign the payload
 image.py: sign the payload
 [6/287] Generating include/generated/zephyr/version.h
--- Zephyr version: 4.0.99 (C:/ncs/v3.0.2/zephyr), build: v4.0.99-ncs1-2
+-- Zephyr version: 4.0.99 (C:/ncs/v3.3.0/zephyr), build: v4.0.99-ncs1-2
 [287/287] Linking C executable zephyr\zephyr.elf
 Memory region         Used Size  Region Size  %age Used
            FLASH:       38480 B        48 KB     78.29%
@@ -68,3 +68,17 @@ balancer-robot-fw\build\balancer-robot-fw\zephyr\zephyr.signed.bin
 
 ![ble-connected](docs/ble-connected.png)
 ![ble-smp-dfu](docs/ble-smp-dfu.png)
+
+## Sign Key
+
+Create signing_key, this is a secret, do NOT push it into repo. Ensure the key type generated with imgtool is the same signature type set in sysbuild
+
+```bash
+imgtool keygen -k signing_key.pem -t ecdsa-p256
+```
+
+```bash
+# add to sysbuild.conf
+SB_CONFIG_BOOT_SIGNATURE_KEY_FILE="C:/project-coding/iot/projects/balancer-robot-fw/signing_key.pem"
+SB_CONFIG_BOOT_SIGNATURE_TYPE_ECDSA_P256=y
+```
