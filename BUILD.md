@@ -13,7 +13,7 @@ west build --build-dir c:/project-coding/iot/projects/balancer-robot-fw/build c:
 - Bash command
 
 ```bash
-west build --build-dir c:/project-coding/iot/projects/balancer-robot-fw/build_ns c:/project-coding/iot/projects/balancer-robot-fw --pristine --board nrf5340dk/nrf5340/cpuapp/ns -- -DEXTRA_CONF_FILE="debug-overlay.conf" -DDEBUG_THREAD_INFO=On -DCONFIG_DEBUG_THREAD_INFO=y -Dbalancer-robot-fw_DEBUG_THREAD_INFO=On -Dmcuboot_DEBUG_THREAD_INFO=Off
+west build --build-dir c:/project-coding/iot/projects/balancer-robot-fw/build_v330_ns c:/project-coding/iot/projects/balancer-robot-fw --pristine --board nrf5340dk/nrf5340/cpuapp/ns -- -DEXTRA_CONF_FILE="debug-overlay.conf;tfm-overlay.conf" -DDEBUG_THREAD_INFO=On -DCONFIG_DEBUG_THREAD_INFO=y -Dbalancer-robot-fw_DEBUG_THREAD_INFO=On -Dmcuboot_DEBUG_THREAD_INFO=Off
 ```
 
 - Result
@@ -21,35 +21,33 @@ west build --build-dir c:/project-coding/iot/projects/balancer-robot-fw/build_ns
 ```bash
 ...
 
--- Cache files will be written to: C:/ncs/v3.3.0/zephyr/.cache
--- Configuring done
--- Generating done
--- Build files have been written to: C:/project-coding/iot/projects/balancer-robot-fw/build_ns/balancer-robot-fw/tfm
-[140/144] Linking C executable bin\tfm_s.axf
+-- Configuring done (1.9s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/project-coding/iot/projects/balancer-robot-fw/build_v330_ns/balancer-robot-fw/tfm
+[162/168] Linking C executable bin\tfm_s.axf
 Memory region         Used Size  Region Size  %age Used
-           FLASH:       47996 B      65024 B     73.81%
-             RAM:       15044 B        32 KB     45.91%
-[17/366] Performing install step for 'tfm'
+           FLASH:       64396 B      65024 B     99.03%
+             RAM:       14724 B        32 KB     44.93%
+[17/390] Performing install step for 'tfm'
 -- Install configuration: "Debug"
 ----- Installing platform NS -----
-[366/366] Linking CXX executable zephyr\zephyr.elf
+[389/390] Linking CXX executable zephyr\zephyr.elf
 Memory region         Used Size  Region Size  %age Used
-           FLASH:      185352 B       416 KB     43.51%
-             RAM:       86928 B       416 KB     20.41%
+           FLASH:      188984 B       416 KB     44.36%
+             RAM:       88660 B       416 KB     20.81%
         IDT_LIST:          0 GB        32 KB      0.00%
-Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_ns/balancer-robot-fw/zephyr/zephyr.elf for board: nrf5340dk
+Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_v330_ns/balancer-robot-fw/zephyr/zephyr.elf for board: nrf5340dk/nrf5340/cpuapp/ns
 image.py: sign the payload
 image.py: sign the payload
-[6/287] Generating include/generated/zephyr/version.h
--- Zephyr version: 4.0.99 (C:/ncs/v3.3.0/zephyr), build: v4.0.99-ncs1-2
-[287/287] Linking C executable zephyr\zephyr.elf
+[6/201] Generating include/generated/zephyr/version.h
+-- Zephyr version: 4.3.99 (C:/ncs/v3.3.0/zephyr), build: ncs-v3.3.0
+[201/201] Linking C executable zephyr\zephyr.elf
 Memory region         Used Size  Region Size  %age Used
-           FLASH:       38480 B        48 KB     78.29%
-             RAM:       22768 B        32 KB     69.48%
+           FLASH:       35600 B        48 KB     72.43%
+             RAM:       16720 B        32 KB     51.03%
         IDT_LIST:          0 GB        32 KB      0.00%
-Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_ns/mcuboot/zephyr/zephyr.elf for board: nrf5340dk
+Generating files from C:/project-coding/iot/projects/balancer-robot-fw/build_v330_ns/mcuboot/zephyr/zephyr.elf for board: nrf5340dk/nrf5340/cpuapp
 [20/20] Generating ../merged.hex
- *  Terminal will be reused by tasks, press any key to close it.
 ```
 
 ## DFU BLE
