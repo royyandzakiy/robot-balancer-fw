@@ -1,0 +1,8 @@
+# copy this file to kconfigs/signing.sysbuild.conf and set your key path
+# signing.sysbuild.conf is gitignored — never commit the actual key path.
+#
+# Generate key:  imgtool keygen -k signing_key.pem -t ecdsa-p256
+#   -DSB_CONF_FILE="sysbuild.conf;kconfigs/signing.sysbuild.conf"
+
+SB_CONFIG_BOOT_SIGNATURE_KEY_FILE="/absolute/path/to/your/signing_key.pem"
+SB_CONFIG_BOOT_SIGNATURE_TYPE_ECDSA_P256=y
